@@ -4,7 +4,9 @@
 
 **vector2raster** is built on the latest in [PhantomJS][] technology to render your SVGs using a headless WebKit. I used the grunt-svg2png plugin and the phantom rasterize.js script as a starting point.
 
-**Prerequisite:** the source svg must have a height and width attribute to make this plugin work.
+**Prerequisites:**
+The source svg must have a height and width attribute to make this plugin work.
+The source svg and the destination image must have the same width:height ratio for optimal results
 
 ## Getting Started
 This plugin requires Grunt `~0.4.2`
@@ -31,25 +33,21 @@ In your project's Gruntfile, add a section named `vector2raster` to the data obj
     ios: {  // Target
       files:[
         {
-          src: "<%= srcDir %>/res/app-icon/icon.svg",           // Source
-          dest: "platforms/ios/<%= pkgName %>/Resources/icons/"
-            // Destination path (+ image name when no options)
+          src: "<%= srcDir %>/res/app-icon/icon.svg",   // Source
+          dest: "platforms/ios/<%= pkgName %>/Resources/icons/"   // Destination path (+ image name when no options)
         }
       ],
-      options:{     // Options
-        dest:[      // Array of objects with dest image properties
+      options:{   // Options
+        dest:[    // Array of objects with dest image properties
           {
-            name:"icon-40.jpg",
-            size:{width:40,height:40}
-                // or just 40 when the image is square
+            name:"icon-40.png",
+            size:{width:40,height:40}   // or just 40 when the image is square
           }
         ]
       }
     }
   }
 ```
-
-***Without options the files.dest path must contain the image name***
 
 
 ## Release History
