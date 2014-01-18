@@ -53,3 +53,4 @@ In your project's Gruntfile, add a section named `vector2raster` to the data obj
 
 ## Release History
 v0.1.0
+v0.1.1 - updated read me file
