@@ -1,0 +1,46 @@
+{
+  "name": "grunt-vector2raster",
+  "description": "Converts svg's to multiple sizes of whatever fileformat Phantom.js supports. Ideal for creating all the (phonegap) App icons you need based on one svg.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jleijenaar/grunt-vector2raster",
+  "author": {
+    "name": "Jorgen Leijenaar",
+    "email": "jorgen.leijenaar@7till11.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jleijenaar/grunt-vector2raster.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jleijenaar/grunt-vector2raster/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jleijenaar/grunt-vector2raster/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "gruntplugin",
+    "convertion",
+    "svg",
+    "raster images",
+    "app icons",
+    "targeted sizes"
+  ]
+}
