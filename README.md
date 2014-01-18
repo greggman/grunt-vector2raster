@@ -34,7 +34,8 @@ In your project's Gruntfile, add a section named `vector2raster` to the data obj
       files:[
         {
           src: "<%= srcDir %>/res/app-icon/icon.svg",   // Source
-          dest: "platforms/ios/<%= pkgName %>/Resources/icons/"   // Destination path (+ image name when no options)
+          dest: "platforms/ios/<%= pkgName %>/Resources/icons/"
+          // Destination path (+ image name when no options)
         }
       ],
       options:{   // Options
