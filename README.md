@@ -1,11 +1,11 @@
 # vector2raster
 
-> Converts svg's to multiple sizes of whatever img fileformat Phantom.js supports. Ideal for creating all the (phonegap) App icons you need based on one svg.
+> Converts svg's to multiple sizes of whatever image fileformats Phantom.js supports. Ideal for creating all the (phonegap) App icons you need based on one svg.
 
 **vector2raster** is built on the latest in [PhantomJS][] technology to render your SVGs using a headless WebKit. I used the grunt-svg2png plugin and the phantom rasterize.js script as a starting point.
 
 **Prerequisites:**
-The source svg must have a height and width attribute to make this plugin work.
+> The source svg must have a height and width attribute to make this plugin work.
 The source svg and the destination image must have the same width:height ratio for optimal results
 
 ## Getting Started
