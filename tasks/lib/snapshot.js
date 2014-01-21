@@ -53,10 +53,6 @@ function getSvgDimensions(page) {
         /*global document: false*/
 
         var el = document.documentElement;
-
-        var width = parseFloat(el.getAttribute("width"));
-        var height = parseFloat(el.getAttribute("height"));
-
-        return { width: width, height: height};
+        return { width: el.offsetWidth, height: el.offsetHeight};
     });
 }

@@ -4,8 +4,6 @@
 
 **vector2raster** is built on the latest in [PhantomJS][] technology to render your SVGs using a headless WebKit. I used the grunt-svg2png plugin and the phantom rasterize.js script as a starting point.
 
-**Prerequisites:**
-> The source svg must have a height and width attribute to make this plugin work.
 The source svg and the destination image must have the same width:height ratio for optimal results
 
 ## Getting Started
@@ -50,9 +48,10 @@ In your project's Gruntfile, add a section named `vector2raster` to the data obj
   }
 ```
 
+# Version History
 
-## Release History
-- 0.1.0 - initial release
-- 0.1.1 - updated read me file
-- 0.1.3 - corrected wrong github url
-- 0.1.4 - updated read me file
+Version  | Date       | Description
+-------- | ---------- | ------------
+`0.1.5`  | `21-01-14` | Removed the need for svg height and width attribute.
+`0.1.4`  | `19-01-14` | Several readme updates.
+`0.1.0`  | `18-01-14` | Initial version.
