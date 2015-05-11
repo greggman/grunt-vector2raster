@@ -16,10 +16,23 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('vector2raster', 'Convert svg to (multiple) (resized) raster images', function() {
 
+        var done = this.async();
         var dest, opts = this.options();
+        var count = 1;
+        var error = false;
 
+        var deCount = function() {
+          --count;
+          if (count === 0) {
+            done(!error);
+          }
+        };
         var callback = function(err){
-            console.log(err);
+            if (err) {
+              error = true;
+              console.error(err);
+            }
+            deCount();
         };
 
         this.files.forEach(function(file) {
@@ -46,10 +59,12 @@ module.exports = function(grunt) {
                 }
  
               };
+              ++count;
               involvePhantom(grunt, file, dest, callback);
           });
 
         });
+        deCount();
   });
 
 };
